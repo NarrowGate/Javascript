@@ -71,6 +71,27 @@ var whatDoYouDo = function(job, firstName) {
 // Expressions give some results whereas declarations do not
 
 
+// while loop
+
+var i = 0;
+
+while(i < john.length) {
+  console.log(john[i]);
+}
+
+for(var i = 0; i < john.length; i++) {
+  if(typeof john[i] !== 'string') continue;
+  console.log(john(i))
+}
+
+
+for(var i = 0; i < john.length; i++) {
+  if(typeof john[i] !== 'string') break;
+  console.log(john(i))
+}
+
+// Scope 
+Only way to create a new scope is to create a function
 
 
 
