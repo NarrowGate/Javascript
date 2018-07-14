@@ -93,8 +93,34 @@ for(var i = 0; i < john.length; i++) {
 // Scope 
 Only way to create a new scope is to create a function
 
+Lexical scope
+function within another function gets access to the scope of the parent function
+
+Execution Stack vs Scope chain
+Order in which functions are called
+Order in which functions are written lexically
+
+'this'
+
+the this keyword is not assigned a value until a function where it is defined is actually called. 
+
+abc();
+
+function abc() {
+  console.log(this) // Global object as this function is attached to Global context (object that called the method)
+}
 
 
+var john {
+  a:'b',
+  funct: function() {
+    console.log(this) john object
+    innerFunc();
+    function innerFunc() {
+      console.log(this) Global object
+    };
+  }
+}
   </script>
 </body>
 </html>
