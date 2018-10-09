@@ -1,6 +1,3 @@
-
-
-
 // Fizzbuzz
 
 function fizzBuzz(num) {
@@ -18,3 +15,22 @@ function fizzBuzz(num) {
 };
 
 fizzBuzz(30)
+
+
+// Ispalindrome
+
+function IsPalindrome() {
+
+}
+
+IsPalindrome()
+
+
+
+// RansomNote
+
+function ransomNote() {
+
+}
+
+ransomNote();
