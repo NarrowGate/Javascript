@@ -56,7 +56,7 @@
 
 
     function ransomNote(note, collection) {
-
+        console.log('test commit')
     }
     
 
