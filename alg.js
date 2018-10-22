@@ -1,3 +1,5 @@
+"use strict"
+
 // Fizzbuzz
 
 // ET
@@ -27,9 +29,13 @@
     
     // fizzBuzz(30)
 
-    // ===============================================================
-    
+// ****************************************************************************************************
+// ****************************************************************************************************
 
+// harmlessRansomNote
+
+// ET
+    
     // function harmlessRansomNote(noteText, magazineText) {
     //     var noteArr = noteText.split(' ');
     //     var magazineArr = magazineText.split(' ');
@@ -54,19 +60,41 @@
 
     // harmlessRansomNote('this is a secret note for you from a secret admirer', 'puerto rico is a place of great wonder and excitement it has many secret waterfall locatoins that i am an admirer of you must hike quite a distance to find the secret places as they are far from populated areas but it is worth the effort a tip i have for you is to go early in the morning when it is not so hot out also note that you must wear hiking boots this is one of the best places i have ever visited');
 
-
     function ransomNote(note, collection) {
-        console.log('test commit')
+
+        const wordsArr = collection.split(' ');
+        const noteWordsArr = note.split(' ');
+        const wordsObj = {};
+
+        wordsArr.forEach(word => {
+            if(!wordsObj[word]) wordsObj[word] = 0; 
+            wordsObj[word]++;
+        });
+
+        let isRansomNote = true;
+
+        for(let word of noteWordsArr) {
+            if(!wordsObj[word] < 1) {
+                wordsObj[word]--
+            } else {
+                isRansomNote = false;
+                break;
+            }
+        };
+
+        return isRansomNote;
     }
     
-
-    let arg1 = "dummy text";
+    let arg1 = "dummy myam text printing dummy myam text printing";
     let arg2 = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-    ransomNote(arg1, arg2);
+    // console.log(ransomNote(arg1, arg2));
 
-    // ===============================================================
+// ****************************************************************************************************
+// ****************************************************************************************************
 
-    // Ispalindrome
+// Ispalindrome
+
+// ET
 
     // function isPalindrome(string) {
     //     string = string.toLowerCase();
