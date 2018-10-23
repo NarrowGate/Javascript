@@ -83,8 +83,8 @@
         return isRansomNote;
     }
     
-    let arg1 = "dummy myam text printing dummy myam text printing";
-    let arg2 = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    //? let arg1 = "dummy myam text printing dummy myam text printing";
+    //? let arg2 = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
     //? console.log(ransomNote(arg1, arg2));
 
 // ****************************************************************************************************
@@ -108,6 +108,23 @@
     //? }
     
     //? isPalindrome("Madam, I'm Adam");
+
+
+    function IsPalindrome(arg) {
+        const lowerCaseStrArr = arg.toLowerCase().split('');
+        const validCharArr = 'abcdefghijklmnopqrstuvwxyz'.split('');
+
+        const checkedValidChar = [];
+
+        lowerCaseStrArr.forEach(letter => {
+            if(validCharArr.indexOf(letter) != -1) checkedValidChar.push(letter);
+        })
+
+        return checkedValidChar.join('') == checkedValidChar.reverse().join('');
+    }
+
+    //? let arg = "madam I'm Adam";
+    //? console.log(IsPalindrome(arg));
 
 // ****************************************************************************************************
 // ****************************************************************************************************
@@ -144,12 +161,7 @@
     //? caesarCipher('Zoo Keeper', 2);
 
 
-// Ispalindrome
-function IsPalindrome() {
 
-}
-
-IsPalindrome()
 
 // Caesar Cipher
 function caesarCipher() {
