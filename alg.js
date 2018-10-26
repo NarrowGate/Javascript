@@ -109,7 +109,6 @@
     
     //? isPalindrome("Madam, I'm Adam");
 
-
     function IsPalindrome(arg) {
         const lowerCaseStrArr = arg.toLowerCase().split('');
         const validCharArr = 'abcdefghijklmnopqrstuvwxyz'.split('');
@@ -160,13 +159,40 @@
 
     //? caesarCipher('Zoo Keeper', 2);
 
+    function caesarCipher(str, num) {
+        const alphabets = 'abcdefghijklmnopqrstuvwxyz'.split('');
+        const strArr = str.toLowerCase().split('');
 
+        const newStingArr = [];
 
+        for( let ind = 0; ind < strArr.length; ind++) {
+            if(strArr[ind] == " ") newStingArr.push(' ');
 
-// Caesar Cipher
-function caesarCipher() {
+            if(alphabets.indexOf(strArr[ind]) != -1) {
 
-}
+                let newNum = alphabets.indexOf(strArr[ind]) + num;
 
-caesarCipher()
+                if(newNum > 25) {
+                    newNum = newNum % 25;
+                }
+
+                if(strArr[ind] != str.split('')[ind]) {
+                    newStingArr.push(alphabets[newNum].toUpperCase());
+                } else newStingArr.push(alphabets[newNum]);
+                
+            }
+
+            console.log(newStingArr.join(''));
+        }
+
+    }
+
+    //? let arg = "Gate Keeper";
+    //? Lfyj Pjjujw
+
+    //? Kexi Oiitiv Right Answer
+    //? console.log(caesarCipher(arg, 30))
+
+    // ****************************************************************************************************
+    // ****************************************************************************************************
 
