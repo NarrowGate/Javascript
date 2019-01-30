@@ -1,22 +1,55 @@
 <html>
     <head>
         <style>
-            .container {
-             display:flex;
+            #container {
              height:50vh;
              background: #0087d8;   
             }
+
+            #container button {
+                width: 10%;
+                height: 50px;
+                display: block;
+                margin-right: 20px;
+                color: black;
+            }
+
         </style>
+
     </head>
     <body>    
 
-        <div class="container">
+        <div id="container">
             
         </div>
 
+        <input type="button" value="Create" onClick = "clickNow()" />
+
+
+        <script>
+                function clickNow() {
+
+                    var noOfButton = 5;
+
+                    var div = document.createElement('div');
+
+                    div.addEventListener('click', function() {
+                        console.log(i);
+                    })
+
+                    for(var i = 0; i < 5; i++ ) {
+                        var btn = document.createElement('button');
+                        btn.innerText = i;
+                        div.appendChild(btn);
+                    }
+
+                    document.getElementById('container').appendChild(div);
+
+                }
+
+        </script>
+
     </body>   
     
-    <script>
-    
-    </script>
+
 </html>
