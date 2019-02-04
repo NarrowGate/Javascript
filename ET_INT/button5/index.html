@@ -19,33 +19,85 @@
     </head>
     <body>    
 
-        <div id="container">
-            
-        </div>
+        <div id="container"></div>
 
         <input type="button" value="Create" onClick = "clickNow()" />
 
 
         <script>
-                function clickNow() {
+            function clickNow() {
+                                
+                s3();
+                
+            }
 
-                    var noOfButton = 5;
+            function s1() {                    
 
-                    var div = document.createElement('div');
+                var div = document.createElement('div');
 
-                    div.addEventListener('click', function() {
+                for(var i = 0; i < 5; i++ ) {
+
+                    var btn = document.createElement('button');
+
+                    (function(s) {
+                        btn.addEventListener('click', function() {
+                            console.log(s);
+                        })
+                    })(i)
+
+                    btn.innerText = i;
+                    div.appendChild(btn);
+                }
+
+                document.getElementById('container').appendChild(div);
+
+            }
+
+            function s2() {
+
+                var div = document.createElement('div');
+
+                for(var i = 0; i < 5; i++ ) {
+
+                    var btn = document.createElement('button');
+
+                    clickFunctionality(btn, i);
+
+                    btn.innerText = i;
+                    div.appendChild(btn);
+                }
+
+                document.getElementById('container').appendChild(div);
+
+
+                function clickFunctionality(btn, s) {
+                    btn.addEventListener('click', function() {
+                        console.log(s);
+                    })
+                }
+
+            }
+
+            function s3() {
+
+                var div = document.createElement('div');
+
+                for(let i = 0; i < 5; i++ ) {
+
+                    var btn = document.createElement('button');
+
+                    btn.addEventListener('click', function() {
                         console.log(i);
                     })
 
-                    for(var i = 0; i < 5; i++ ) {
-                        var btn = document.createElement('button');
-                        btn.innerText = i;
-                        div.appendChild(btn);
-                    }
-
-                    document.getElementById('container').appendChild(div);
-
+                    btn.innerText = i;
+                    div.appendChild(btn);
                 }
+
+                document.getElementById('container').appendChild(div);
+
+            }                
+
 
         </script>
 
